@@ -1,13 +1,13 @@
 $(document).ready( function(){
-	$(".js-back").hide();
+	$(".home .js-back").hide();
+	$(".make .js-menu").hide();
 
-
-
+});
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);	
-
-});
+	
+$("#printNews").append("<p>NUEVAS RECETAS</p>");
 
 
 
@@ -43,8 +43,6 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
+function renderActivity(recipe) {	
 }
-
 
