@@ -4,30 +4,34 @@ $(document).ready( function(){
 	//oculta menu
 	$(".make .js-menu").hide();
 
-	
-	//Imprimir recetas
-	function texto(){
-$("#printNews").append("<p>NUEVAS RECETAS</p>");
-};
- texto();
 
 //La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
-	renderHighlightedRecipes(recipesArray);	
+renderHighlightedRecipes(recipesArray);	
+
+	//Imprimir recetas
+	function texto(){
+		$("#printNews").append("<p>NUEVAS RECETAS</p>");
+	};
+	texto();
 
 });
+
+
+
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray){
-	for(var i = 0; i<recipesArray; i++){
-		if(highlighted == true);
+	for(var i = 0; i<recipesArray.length; i++){//recorre
+		if(highlighted == true);//condición
 		return (renderRecipes(recipesArray));
 		console.log('Recipes: ', recipesArray);
 	}
-}
-	
+};
+
+
 
 
 
@@ -37,12 +41,19 @@ function renderHighlightedRecipes(recipesArray){
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
 */
-function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
-}
+/*function renderRecipe(recipe) {
+	$(".list-recipes").append("<a class="item-recipe" href="#">");
+	<span class="attribution">
+	<span class="title-recipe"> + title</span>
+	<span class="metadata-recipe">
+	<span class="author-recipe"> + source.name</span>
+	</span>
+	</span>
+	</span>
+	 <img src="img/recipes/640X480">
+</a>
 
-
-
+};*/
 /*
 * Función que se encarga de pintar todas las actividades
 */
